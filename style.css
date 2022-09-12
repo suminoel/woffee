@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*
+Theme Name: woffee
+Theme URI: https://suminoel.com/woffee/
+Description: 必要最低限のシンプルな機能に加え、プラグイン干渉が起きないための各機能オンオフ設定を備えた、無料のWordPressテーマです。
+Author: すみのえるWEB工房
+Author URI: http://suminoel.com/
+Version: 1.0.0
+*/
+/* Variables
+* ---------------------------------------- */
+/* Colors
+* ---------------------------------------- */
+/* SNS Colors
+* ---------------------------------------- */
+/* Font
+* ---------------------------------------- */
+/* Mixins
+* ---------------------------------------- */
+/* Base styles
+* ---------------------------------------- */
+.pagination-wrap {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.pagination-wrap .pagination {
+  justify-content: center;
+  margin: 0 auto;
+}

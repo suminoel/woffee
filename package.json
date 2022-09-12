@@ -1,0 +1,24 @@
+{
+  "name": "original",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-sass": "^2.1.0",
+    "node-sass": "^4.14.1",
+    "gulp-uglify": "^1.5.1"
+  }
+}
