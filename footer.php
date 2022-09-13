@@ -31,7 +31,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 						</nav>
 					<?php endif; ?>
 
-					<p class="copyright">&copy; 20XX <?php echo get_bloginfo('name');?>.</p>
+					<p class="copyright text-center">&copy; 20XX <?php echo get_bloginfo('name');?>.</p>
 
 				</div>
 

@@ -1,0 +1,12 @@
+#sidebar {
+    width: 300px;
+
+    @include max-tab {
+        display: block;
+        width: 100%;
+    }
+
+    .widget {
+        margin-bottom: 40px;
+    }
+}

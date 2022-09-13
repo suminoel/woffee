@@ -1,0 +1,9 @@
+#site-main {
+    width: calc(100% - 340px);
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    @include max-tab {
+        width: 100%;
+    }
+}

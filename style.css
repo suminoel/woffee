@@ -2,23 +2,140 @@
 /*
 Theme Name: woffee
 Theme URI: https://suminoel.com/woffee/
-Description: 必要最低限のシンプルな機能に加え、プラグイン干渉が起きないための各機能オンオフ設定を備えた、無料のWordPressテーマです。
+Description: 必要最低限のシンプルな機能に加え、プラグイン干渉が起きないための各機能オンオフ設定を兼ね備えた、無料のWordPressテーマです。
 Author: すみのえるWEB工房
 Author URI: http://suminoel.com/
 Version: 1.0.0
 */
-/* Variables
-* ---------------------------------------- */
 /* Colors
 * ---------------------------------------- */
 /* SNS Colors
 * ---------------------------------------- */
 /* Font
 * ---------------------------------------- */
-/* Mixins
+/* Font Size
 * ---------------------------------------- */
-/* Base styles
+/* Media Query
 * ---------------------------------------- */
+body {
+  background: #fff;
+  color: #383838;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(28px, 4.861vw, 40px);
+}
+
+h2 {
+  font-size: clamp(24px, 4.167vw, 34px);
+}
+
+h3 {
+  font-size: clamp(18px, 3.125vw, 26px);
+}
+
+h4, h5, h6 {
+  font-size: clamp(16px, 2.778vw, 23px);
+}
+
+.content-wrap {
+  padding-top: 80px;
+  background: #f9f9f9;
+}
+
+@media screen and (max-width: 1200px) {
+  .content-wrap .container {
+    max-width: inherit;
+  }
+}
+.header .site-description {
+  font-size: clamp(12px, 2.083vw, 17px);
+}
+
+.header .site-logo {
+  font-size: clamp(20px, 3.472vw, 29px);
+}
+
+.header .site-logo a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.header .site-navigation {
+  background: #2581c4;
+}
+
+@media screen and (max-width: 991px) {
+  .header .site-navigation {
+    display: none;
+  }
+}
+.header .site-navigation .sub-menu {
+  display: none;
+  list-style-type: none;
+}
+
+.header .site-navigation .menu-item {
+  position: relative;
+}
+
+.header .site-navigation .menu-item:hover .sub-menu {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.header .site-navigation a {
+  background: #2581c4;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.header .site-navigation a:hover {
+  background: #fff;
+  color: #2581c4;
+}
+
+#site-main {
+  width: calc(100% - 340px);
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 991px) {
+  #site-main {
+    width: 100%;
+  }
+}
+#sidebar {
+  width: 300px;
+}
+
+@media screen and (max-width: 991px) {
+  #sidebar {
+    display: block;
+    width: 100%;
+  }
+}
+#sidebar .widget {
+  margin-bottom: 40px;
+}
+
+footer {
+  padding-top: 40px;
+}
+
 .pagination-wrap {
   width: 100%;
   margin: 40px 0;

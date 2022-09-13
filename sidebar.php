@@ -11,6 +11,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 if ( !is_active_sidebar( 'sidebar' ) ) return;
 ?>
-<div id="sidebar" class="col-3">
+<div id="sidebar">
 	<?php dynamic_sidebar( 'sidebar' ); ?>
 </div><!-- #secondary -->

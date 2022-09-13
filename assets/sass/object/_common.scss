@@ -1,0 +1,10 @@
+.content-wrap {
+    padding-top: 80px;
+    background: $sub-color;
+
+    .container {
+        @include min-pc {
+            max-width: inherit;
+        }
+    }
+}

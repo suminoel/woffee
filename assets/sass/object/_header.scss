@@ -1,0 +1,58 @@
+.header {
+    .site {
+        &-description {
+            font-size: fontSize(12);
+        }
+
+        &-logo {
+            font-size: fontSize(20);
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+
+        &-navigation {
+            background: $main-color;
+
+            @include max-tab {
+                display: none;
+            }
+
+            .sub-menu {
+                display: none;
+                list-style-type: none;
+            }
+
+            .menu-item {
+                position: relative;
+
+                &:hover {
+                    .sub-menu {
+                        display: inline-block;
+                        margin-left: 2rem;
+                        padding: 0;
+                        width: 100%;
+                        position: absolute;
+                    }
+                }
+            }
+
+            a {
+                background: $main-color;
+                color: #fff;
+                text-decoration: none;
+                padding: 12px 24px;
+                display: block;
+                position: relative;
+                z-index: 1;
+
+                &:hover {
+                    background: #fff;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

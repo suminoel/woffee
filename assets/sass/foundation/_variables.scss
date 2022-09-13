@@ -60,7 +60,7 @@ $font-sans: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "�
     $maxWidth:992;
     $minFontSize:calc($minFont * 1px);
     $minVw:calc(round(calc($minFont / $minWidth * 100 * 1000)) / 1000);
-    $maxFontSize:calc(round($maxWidth * calc($minVw / 100)) * 1px);
+    $maxFontSize:calc(round($maxWidth * calc($minVw / 120)) * 1px);
     @return clamp(#{$minFontSize},#{$minVw}vw,#{$maxFontSize});
 }
 

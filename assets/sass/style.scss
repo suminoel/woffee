@@ -1,33 +1,27 @@
 /*
 Theme Name: woffee
 Theme URI: https://suminoel.com/woffee/
-Description: 必要最低限のシンプルな機能に加え、プラグイン干渉が起きないための各機能オンオフ設定を備えた、無料のWordPressテーマです。
+Description: 必要最低限のシンプルな機能に加え、プラグイン干渉が起きないための各機能オンオフ設定を兼ね備えた、無料のWordPressテーマです。
 Author: すみのえるWEB工房
 Author URI: http://suminoel.com/
 Version: 1.0.0
 */
 
-//****************************************
-//     Foundation
-//****************************************
-
-/* Variables
-* ---------------------------------------- */
+// Variables
 @import "foundation/variables";
 
-/* Mixins
-* ---------------------------------------- */
+// Mixins
 @import "foundation/mixins";
 
-/* Base styles
-* ---------------------------------------- */
+// Base styles
 @import "foundation/base";
 
-
-//****************************************
-//     Object
-//****************************************
-
+// Object
+@import "object/common";
+@import "object/header";
+@import "object/main";
+@import "object/sidebar";
+@import "object/footer";
 @import "object/pagination";
 
 

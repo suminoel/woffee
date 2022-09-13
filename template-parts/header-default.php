@@ -8,26 +8,29 @@
  * @license: http://www.gnu.org/licenses/gpl-2.0.html GPL v2 or later
  */
 ?>
-<header class="">
+<header class="header clearfix">
 
 	<div class="container text-center">
 
-		<?php
-		$description = get_bloginfo( 'description', 'display' );
-		if ( $description || is_customize_preview() ) : ?>
-			<p class="tagline" itemprop="alternativeHeadline"><?php echo $description; ?></p>
-		<?php endif; ?>
+		<div class="site-description">
+
+			<?php
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="tagline" itemprop="alternativeHeadline"><?php echo $description; ?></p>
+			<?php endif; ?>
+
+		</div>
+
+		<div class="site-logo">
+
+			<?php woffee_brand_logo(); ?>
+
+		</div>
 
 	</div>
 
-	<div class="container text-center">
-
-
-		<?php woffee_brand_logo(); ?>
-
-	</div>
-
-	<nav id="site-navigation" class="container bd-gutter flex-wrap flex-lg-nowrap">
+	<nav id="site-navigation" class="site-navigation bd-gutter flex-wrap flex-lg-nowrap">
 
 			<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 

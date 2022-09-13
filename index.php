@@ -11,96 +11,100 @@ if ( !defined( 'ABSPATH' ) ) exit;
 $layout_type = get_theme_mod( 'sidebar_layout', 'sidebar_right' );
 get_header(); ?>
 
-<div class="container">
+<div class="content-wrap">
 
-	<div class="row">
+	<div class="container">
 
-		<?php
-		if ( $layout_type === 'sidebar_left') :
-			get_sidebar();
-		endif;
-		?>
-
-		<main id="site-content" class="col-9">
+		<div class="row">
 
 			<?php
-			$archive_title    = '';
-			$archive_subtitle = '';
-
-			if ( !is_home() ) {
-				$archive_title    = get_the_archive_title();
-				$archive_subtitle = get_the_archive_description();
-			}
-
-			if ( $archive_title || $archive_subtitle ) {
-				?>
-
-				<header class="archive-header has-text-align-center header-footer-group">
-
-					<div class="archive-header-inner section-inner medium">
-
-						<?php if ( $archive_title ) { ?>
-							<h1 class="archive-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
-						<?php } ?>
-
-						<?php if ( $archive_subtitle ) { ?>
-							<div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post( wpautop( $archive_subtitle ) ); ?></div>
-						<?php } ?>
-
-					</div><!-- .archive-header-inner -->
-
-				</header><!-- .archive-header -->
-
-				<?php
-			}
-
-			if ( have_posts() ) {
-
-				$i = 0;
-				$count = $wp_query->found_posts;
-
-				while ( have_posts() ) {
-					$i++;
-					if ( $i === 1 ) {
-						echo '<div class="row row-cols-1 row-cols-md-2 g-4">';
-					}
-
-					the_post();
-
-					get_template_part( 'template-parts/content', get_post_type() );
-
-					if ( $i === $count ) {
-						echo '</div>';
-					}
-				}
-			} elseif ( is_search() ) {
-				?>
-
-				<div class="no-search-results-form section-inner thin">
-
-					<?php
-					get_search_form(
-						array(
-							'aria_label' => __( 'search again', 'woffee' ),
-						)
-					);
-					?>
-
-				</div><!-- .no-search-results -->
-
-				<?php
-			}
+			if ( $layout_type === 'sidebar_left') :
+				get_sidebar();
+			endif;
 			?>
 
-			<?php woffee_pagination(); ?>
+			<main id="site-main">
 
-		</main><!-- #site-content -->
+				<?php
+				$archive_title    = '';
+				$archive_subtitle = '';
 
-		<?php
-		if ( $layout_type === 'sidebar_right') :
-			get_sidebar();
-		endif;
-		?>
+				if ( !is_home() ) {
+					$archive_title    = get_the_archive_title();
+					$archive_subtitle = get_the_archive_description();
+				}
+
+				if ( $archive_title || $archive_subtitle ) {
+					?>
+
+					<header class="archive-header has-text-align-center header-footer-group">
+
+						<div class="archive-header-inner section-inner medium">
+
+							<?php if ( $archive_title ) { ?>
+								<h1 class="archive-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
+							<?php } ?>
+
+							<?php if ( $archive_subtitle ) { ?>
+								<div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post( wpautop( $archive_subtitle ) ); ?></div>
+							<?php } ?>
+
+						</div><!-- .archive-header-inner -->
+
+					</header><!-- .archive-header -->
+
+					<?php
+				}
+
+				if ( have_posts() ) {
+
+					$i = 0;
+					$count = $wp_query->found_posts;
+
+					while ( have_posts() ) {
+						$i++;
+						if ( $i === 1 ) {
+							echo '<div class="row row-cols-1 row-cols-md-2 g-4">';
+						}
+
+						the_post();
+
+						get_template_part( 'template-parts/content', get_post_type() );
+
+						if ( $i === $count ) {
+							echo '</div>';
+						}
+					}
+				} elseif ( is_search() ) {
+					?>
+
+					<div class="no-search-results-form section-inner thin">
+
+						<?php
+						get_search_form(
+							array(
+								'aria_label' => __( 'search again', 'woffee' ),
+							)
+						);
+						?>
+
+					</div><!-- .no-search-results -->
+
+					<?php
+				}
+				?>
+
+				<?php woffee_pagination(); ?>
+
+			</main><!-- #site-content -->
+
+			<?php
+			if ( $layout_type === 'sidebar_right') :
+				get_sidebar();
+			endif;
+			?>
+
+		</div>
 
 	</div>
 
